@@ -11,6 +11,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   int colors[3] = {128,128,128};
     if (digitalRead(2) == LOW) {
+      // Pass by reference colors to setColors()
       setColors(&colors[0]);
       digitalWrite(13,LOW);
       setCol(colors[0], colors[1], colors[2]);
